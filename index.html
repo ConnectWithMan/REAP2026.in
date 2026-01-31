@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +11,9 @@
         content="REAP 2026 Official Website. REAP Counselling Registration 2026 Last Date, July 2026. ELIGIBILITY CRITERIA FOR REAP 2026. For BE/ B.Tech Admissions.">
     <meta name="keywords" content="reap, reap counselling, reap counselling 2026, reap official website, reap full form, reap rajasthan">
     <!-- Google Fonts for modern typography -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9724513291347385"
      crossorigin="anonymous"></script>
@@ -32,33 +35,36 @@
         }
 
         :root {
-            --primary-color: #960096;
+            --primary-color: #8e2de2;
             /* Purple */
-            --secondary-color: #007bff;
+            --secondary-color: #4a00e0;
             /* Blue */
             --accent-color: #ffc107;
             /* Yellow */
             --danger-color: #dc3545;
             /* Red */
-            --text-dark: #212529;
-            --text-medium: #495057;
+            --text-dark: #1a1a1a;
+            --text-medium: #555555;
             --text-light: #f8f9fa;
-            --bg-light: #f8f9fa;
+            --bg-light: #f0f2f5;
             --bg-white: #ffffff;
             --border-color: #dee2e6;
             --border-light: #e9ecef;
             --font-family-base: 'Roboto', Arial, sans-serif;
-            --border-radius-sm: 4px;
-            --border-radius-md: 8px;
-            --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
-            --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.07);
-            --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
+            --font-family-heading: 'Poppins', sans-serif;
+            --border-radius-sm: 8px;
+            --border-radius-md: 16px;
+            --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
 
         html,
         body {
             font-family: var(--font-family-base);
             background: var(--bg-light);
+            background-image: radial-gradient(#cbd5e0 1px, transparent 1px);
+            background-size: 24px 24px;
             color: var(--text-dark);
             margin: 0;
             padding: 0;
@@ -66,18 +72,46 @@
             font-size: 16px;
         }
 
+        /* Custom Scrollbar & Selection */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-color);
+            border-radius: 6px;
+            border: 3px solid #f1f1f1;
+        }
+        ::selection {
+            background: var(--primary-color);
+            color: #fff;
+        }
+
         a {
             color: var(--secondary-color);
             text-decoration: none;
         }
 
+        h1, h2, h3, h4, .nav-branding, .section-title, .btn {
+            font-family: var(--font-family-heading);
+        }
+
         /* Navbar */
         header {
-            background-color: #ffffff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: var(--shadow-sm);
             position: sticky;
-            top: 0;
+            top: 1rem;
             z-index: 100;
+            width: 95%;
+            max-width: 1200px;
+            margin: 0 auto;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
         }
 
         .navbar {
@@ -112,10 +146,26 @@
             font-weight: 500;
             transition: color 0.3s ease-in-out;
             padding: 0.5rem 0; /* Add some vertical padding for clickability */
+            position: relative;
         }
 
         .nav-link:hover {
             color: #3498db;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--secondary-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
         }
 
         /* Hamburger Menu Styles */
@@ -160,7 +210,7 @@
         .btn {
             display: inline-block;
             font-weight: 500;
-            border-radius: var(--border-radius-sm);
+            border-radius: 50px;
             padding: 0.85rem 2.2rem;
             font-size: 1.1rem;
             border: none;
@@ -189,11 +239,31 @@
         }
 
         .hero {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            background: linear-gradient(-45deg, var(--primary-color), var(--secondary-color), #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            background-blend-mode: overlay;
             color: var(--text-light);
-            padding: 80px 0 60px 0;
+            padding: 140px 0 100px 0;
             position: relative;
             overflow: hidden;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .hero-content {
@@ -207,6 +277,7 @@
         .hero-text {
             flex: 1 1 400px;
             padding-right: 30px;
+            animation: fadeInUp 0.8s ease-out;
         }
 
         .hero-text h1 {
@@ -256,10 +327,30 @@
         .section {
             background: var(--bg-white);
             border-radius: var(--border-radius-md);
-            box-shadow: var(--shadow-md);
+            box-shadow: var(--shadow-sm);
             margin-top: 45px;
             margin-bottom: 45px;
             padding: 40px 0; /* Vertical padding */
+            border: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: visible;
+            position: relative;
+        }
+
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
         }
 
         /* Ensure content within sections aligns with the container */
@@ -271,7 +362,7 @@
         .section-title {
             font-size: 2.2rem;
             font-weight: 700;
-            color: var(--primary-color);
+            color: #333;
             margin-bottom: 30px;
             text-align: center;
             position: relative;
@@ -286,7 +377,7 @@
             bottom: 0;
             width: 70px;
             height: 4px;
-            background-color: var(--secondary-color);
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
             border-radius: 2px;
         }
 
@@ -300,11 +391,14 @@
             overflow-x: auto;
             margin-top: 1rem;
             margin-bottom: 1.5rem;
+            border-radius: var(--border-radius-sm);
+            box-shadow: var(--shadow-sm);
         }
 
         table {
             width: 100%;
-            border-collapse: collapse;
+            border-collapse: separate;
+            border-spacing: 0;
             background: var(--bg-white);
             margin: 0 auto;
         }
@@ -312,31 +406,50 @@
         th,
         td {
             padding: 1rem 1.1rem;
-            border: 1px solid var(--border-light);
+            border: none;
+            border-bottom: 1px solid var(--border-light);
             text-align: left;
             vertical-align: middle;
         }
 
         th {
-            background: var(--primary-color);
-            color: var(--text-light);
+            background: #fff;
+            color: var(--primary-color);
             font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            border-bottom: 2px solid var(--border-light);
         }
 
         tr:nth-child(even) td {
-            background: #fdf6fd;
+            background: transparent;
         }
 
-        ul {
+        tr:hover td {
+            background-color: #f8f9fa;
+        }
+
+        .section ul {
             margin: 1rem 0 2rem 0;
-            padding-left: 1.5rem;
-            list-style-type: disc;
+            padding-left: 0;
+            list-style: none;
             color: var(--text-medium);
         }
 
-        li {
+        .section li {
+            position: relative;
+            padding-left: 1.8rem;
             margin-bottom: 0.7rem;
             font-size: 1.05rem;
+        }
+
+        .section li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
         }
 
         .card {
@@ -421,12 +534,13 @@
         }
 
         footer {
-            background: var(--text-dark);
+            background: linear-gradient(to right, #1a1a1a, #2c3e50);
             color: var(--text-light);
-            padding: 30px 0 20px 0;
+            padding: 40px 0;
             font-size: 0.98rem;
             text-align: center;
             margin-top: 50px;
+            border-top: 5px solid var(--secondary-color);
         }
 
         /* Responsive Adjustments */
@@ -587,7 +701,7 @@
                     <a href="/" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/faq" class="nav-link">FAQs</a>
+                    <a href="/faq" class="nav-link">FAQ</a>
                 </li>
                 <li class="nav-item">
                     <a href="/about" class="nav-link">About Us</a>
@@ -794,7 +908,7 @@
                     </tbody>
                 </table>
             </div>
-            <h3 class="important-notice">Start REAP Counselling Now</h3>
+            <h3 class="important-notice">REAP Counselling Support</h3>
             <div class="cta-container">
                 <a href="https://api.whatsapp.com/send?phone=7878358707&text=Hello" class="btn">Contact Us</a>
             </div>
