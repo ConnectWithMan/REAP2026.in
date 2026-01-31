@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,10 +36,10 @@
         }
 
         :root {
-            --primary-color: #8e2de2;
-            /* Purple */
-            --secondary-color: #4a00e0;
+            --primary-color: #007bff;
             /* Blue */
+            --secondary-color: #0056b3;
+            /* Darker Blue */
             --accent-color: #ffc107;
             /* Yellow */
             --danger-color: #dc3545;
@@ -63,8 +64,6 @@
         body {
             font-family: var(--font-family-base);
             background: var(--bg-light);
-            background-image: radial-gradient(#cbd5e0 1px, transparent 1px);
-            background-size: 24px 24px;
             color: var(--text-dark);
             margin: 0;
             padding: 0;
@@ -100,18 +99,13 @@
 
         /* Navbar */
         header {
-            background-color: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+            background-color: #ffffff;
             box-shadow: var(--shadow-sm);
             position: sticky;
-            top: 1rem;
+            top: 0;
             z-index: 100;
-            width: 95%;
-            max-width: 1200px;
-            margin: 0 auto;
-            border-radius: 50px;
-            border: 1px solid rgba(255, 255, 255, 0.5);
+            width: 100%;
+            border-bottom: 1px solid var(--border-light);
         }
 
         .navbar {
@@ -214,7 +208,7 @@
             padding: 0.85rem 2.2rem;
             font-size: 1.1rem;
             border: none;
-            background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            background: var(--primary-color);
             color: var(--text-light);
             transition: all 0.3s ease;
             box-shadow: var(--shadow-sm);
@@ -224,7 +218,7 @@
         }
 
         .btn:hover {
-            background: linear-gradient(90deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+            background: var(--secondary-color);
             box-shadow: var(--shadow-md);
             transform: translateY(-2px);
         }
@@ -239,20 +233,10 @@
         }
 
         .hero {
-            background: linear-gradient(-45deg, var(--primary-color), var(--secondary-color), #23a6d5, #23d5ab);
-            background-size: 400% 400%;
-            animation: gradientBG 15s ease infinite;
-            background-blend-mode: overlay;
+            background: var(--primary-color);
             color: var(--text-light);
             padding: 140px 0 100px 0;
             position: relative;
-            overflow: hidden;
-        }
-
-        @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
         }
 
         @keyframes fadeInUp {
@@ -326,31 +310,14 @@
 
         .section {
             background: var(--bg-white);
-            border-radius: var(--border-radius-md);
+            border-radius: var(--border-radius-sm);
             box-shadow: var(--shadow-sm);
-            margin-top: 45px;
-            margin-bottom: 45px;
+            margin-top: 30px;
+            margin-bottom: 30px;
             padding: 40px 0; /* Vertical padding */
-            border: none;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid var(--border-light);
             overflow: visible;
             position: relative;
-        }
-
-        .section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-            border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
-        }
-
-        .section:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
         }
 
         /* Ensure content within sections aligns with the container */
@@ -377,7 +344,7 @@
             bottom: 0;
             width: 70px;
             height: 4px;
-            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            background: var(--primary-color);
             border-radius: 2px;
         }
 
@@ -477,7 +444,7 @@
         }
 
         .card.highlight-card {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            background: var(--primary-color);
             color: var(--text-light);
             box-shadow: var(--shadow-lg);
         }
@@ -534,13 +501,13 @@
         }
 
         footer {
-            background: linear-gradient(to right, #1a1a1a, #2c3e50);
+            background: #1a1a1a;
             color: var(--text-light);
             padding: 40px 0;
             font-size: 0.98rem;
             text-align: center;
             margin-top: 50px;
-            border-top: 5px solid var(--secondary-color);
+            border-top: none;
         }
 
         /* Responsive Adjustments */
