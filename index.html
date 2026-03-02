@@ -1,6 +1,4 @@
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -667,6 +665,67 @@
                 padding: 20px 10px;
             }
         }
+
+        /* Dropdown Styles */
+        .dropdown {
+            position: relative;
+        }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #fff;
+            box-shadow: var(--shadow-md);
+            min-width: 220px;
+            z-index: 1000;
+            border-radius: var(--border-radius-sm);
+            padding: 0.5rem 0;
+            border: 1px solid var(--border-light);
+            list-style: none;
+        }
+        .dropdown:hover .dropdown-menu,
+        .dropdown.active .dropdown-menu {
+            display: block;
+        }
+        .dropdown-item {
+            display: block;
+            padding: 0.7rem 1.5rem;
+            color: var(--text-dark);
+            transition: all 0.2s;
+        }
+        .dropdown-item:hover {
+            background-color: var(--bg-light);
+            color: var(--primary-color);
+        }
+        @media (max-width: 767px) {
+            .dropdown-menu {
+                position: static;
+                box-shadow: none;
+                border: none;
+                background: transparent;
+                padding-left: 1.5rem;
+            }
+            .dropdown-item {
+                padding: 0.5rem 0;
+            }
+        }
+
+        /* Footer Menu */
+        .footer-menu {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .footer-menu a {
+            color: #ccc;
+            transition: color 0.3s;
+        }
+        .footer-menu a:hover {
+            color: var(--primary-color);
+        }
     </style>
 </head>
 
@@ -682,23 +741,19 @@
                 <li class="nav-item">
                     <a href="/top-colleges" class="nav-link">Top Colleges</a>
                 </li>
-                <li class="nav-item">
-                    <a href="/reservation" class="nav-link">Reservation</a>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">More ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/reap-counselling-process" class="dropdown-item">Counselling Process</a></li>
+                        <li><a href="/reap-cutoff" class="dropdown-item">REAP Cutoff</a></li>
+                        <li><a href="/reap-eligibility-criteria" class="dropdown-item">Eligibility Criteria</a></li>
+                        <li><a href="/reservation" class="dropdown-item">Reservation</a></li>
+                        <li><a href="/reap-registration" class="dropdown-item">Registration</a></li>
+                        <li><a href="/documents-required-for-reap-counselling" class="dropdown-item">Documents Required</a></li>
+                    </ul>
                 </li>
                 <li class="nav-item">
                     <a href="/faq" class="nav-link">FAQ</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/about" class="nav-link">About Us</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/contact" class="nav-link">Contact Us</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/privacy" class="nav-link">Privacy</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/terms" class="nav-link">Terms</a>
                 </li>
             </ul>
             <div class="hamburger">
@@ -739,7 +794,7 @@
                 courses in Rajasthan. This state-level process, supported by government-aided and private unaided technical
                 institutions, offers a fair and competitive selection based on merit—no separate entrance exam required.
                 Diploma holders in engineering and technology are also eligible. REAP 2026 features three rounds of
-                counseling, open to candidates from Rajasthan and other states.
+                <a href="/reap-counselling-process">counseling</a>, open to candidates from Rajasthan and other states.
             </p>
         </div>
     </section>
@@ -840,7 +895,38 @@
     </section>
 
     <!-- HOW TO APPLY SECTION -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">How to Apply for REAP 2026</div>
+            <p>Candidates willing to apply for REAP 2026 must follow the steps below to complete the <a href="/reap-registration">online registration process</a>:</p>
+            <ul>
+                <li><b>Step 1: Online Registration:</b> Visit the official REAP website and register using a valid email ID and mobile number.</li>
+                <li><b>Step 2: Fee Payment:</b> Pay the non-refundable application fee of Rs. 590/- via Net Banking, Credit Card, or Debit Card.</li>
+                <li><b>Step 3: Fill Application Form:</b> Log in with your credentials and fill in personal, academic, and contact details accurately.</li>
+                <li><b>Step 4: Upload Documents:</b> Upload scanned copies of your photograph, signature, and relevant mark sheets as per the prescribed format.</li>
+                <li><b>Step 5: Choice Filling:</b> Select your <a href="/top-colleges">preferred colleges</a> and branches. It is advisable to fill in maximum choices to increase the chances of seat allotment.</li>
+                <li><b>Step 6: Lock Choices:</b> Lock your choices before the deadline. If not locked, the system will automatically lock the saved choices.</li>
+            </ul>
+        </div>
+    </section>
 
+    <!-- DOCUMENTS REQUIRED SECTION -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">Documents Required</div>
+            <p>Candidates must produce the following original documents along with self-attested copies at the time of reporting to the allotted institute:</p>
+            <ul>
+                <li>Aadhaar Card or valid Photo ID proof.</li>
+                <li>10th Class Marksheet and Certificate (Date of Birth Proof).</li>
+                <li>12th Class Marksheet and Certificate.</li>
+                <li>JEE Main 2026 Score Card (if admission via JEE Main).</li>
+                <li>Domicile Certificate (for Rajasthan candidates).</li>
+                <li>Category Certificate (SC/ST/OBC/MBC/EWS) issued by competent authority.</li>
+                <li>Income Certificate (for TFWS candidates).</li>
+                <li>Medical Fitness Certificate.</li>
+            </ul>
+        </div>
+    </section>
 
     <!-- SEAT ALLOTMENT SECTION -->
     <section class="section">
@@ -899,6 +985,12 @@
 
     <!-- FOOTER -->
     <footer>
+        <div class="footer-menu">
+            <a href="/about">About Us</a>
+            <a href="/contact">Contact Us</a>
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/terms">Terms & Conditions</a>
+        </div>
         &copy;
         <script>document.write(new Date().getFullYear());</script> All Rights Reserved.
     </footer>
@@ -913,11 +1005,38 @@
                 navMenu.classList.toggle('active');
             });
 
-            // Close menu when a nav link is clicked (for mobile)
-            document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('active');
-            }));
+            // Handle Dropdown Toggles and Links
+            document.querySelectorAll('.nav-link').forEach(n => {
+                n.addEventListener('click', (e) => {
+                    const parent = n.parentElement;
+                    if (parent.classList.contains('dropdown')) {
+                        // It's a dropdown toggle
+                        e.preventDefault();
+                        parent.classList.toggle('active');
+                    } else {
+                        // It's a regular link
+                        hamburger.classList.remove('active');
+                        navMenu.classList.remove('active');
+                    }
+                });
+            });
+
+            // Close menu when a dropdown item is clicked
+            document.querySelectorAll('.dropdown-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                    // Close all dropdowns
+                    document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('active'));
+                });
+            });
+
+            // Close dropdowns when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('.dropdown')) {
+                    document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('active'));
+                }
+            });
         });
     </script>
 </body>
