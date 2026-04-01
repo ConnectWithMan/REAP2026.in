@@ -1,116 +1,155 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<script src="chrome-extension://hoklmmgfnpapgjgcpechhaamimifchmp/frame_ant/frame_ant.js"/>
 
 <url>
-  <loc>https://reap2026.in/</loc>
-  <lastmod>2026-03-11T21:14:47+00:00</lastmod>
-  <priority>1.00</priority>
+<loc>https://reap2026.in/</loc>
+<lastmod>2026-04-01T19:11:26+00:00</lastmod>
+<priority>1.00</priority>
 </url>
 <url>
-  <loc>https://reap2026.in/reap-counselling-process</loc>
-  <lastmod>2026-03-11T21:14:47+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://reap2026.in/reap-counselling-process</loc>
+<lastmod>2026-04-01T19:11:26+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://reap2026.in/reap-choice-filling-process</loc>
-  <lastmod>2026-03-11T21:14:47+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://reap2026.in/reap-choice-filling-process</loc>
+<lastmod>2026-04-01T19:11:26+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://reap2026.in/reap-seat-allotment-process</loc>
-  <lastmod>2026-03-11T21:14:47+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://reap2026.in/reap-seat-allotment-process</loc>
+<lastmod>2026-04-01T19:11:26+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://reap2026.in/reap-cutoff</loc>
-  <lastmod>2026-03-11T21:14:47+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://reap2026.in/reap-cutoff</loc>
+<lastmod>2026-04-01T19:11:26+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://reap2026.in/reap-eligibility-criteria</loc>
-  <lastmod>2026-03-11T21:14:47+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://reap2026.in/reap-eligibility-criteria</loc>
+<lastmod>2026-04-01T19:11:26+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://reap2026.in/reservation</loc>
-  <lastmod>2026-03-11T21:14:47+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://reap2026.in/reservation</loc>
+<lastmod>2026-04-01T19:11:26+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://reap2026.in/reap-registration</loc>
-  <lastmod>2026-03-11T21:14:47+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://reap2026.in/reap-registration</loc>
+<lastmod>2026-04-01T19:11:26+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://reap2026.in/documents-required-for-reap-counselling</loc>
-  <lastmod>2026-03-11T21:14:47+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://reap2026.in/documents-required-for-reap-counselling</loc>
+<lastmod>2026-04-01T19:11:26+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://reap2026.in/reap-upward-movement</loc>
-  <lastmod>2026-03-11T21:14:47+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://reap2026.in/reap-upward-movement</loc>
+<lastmod>2026-04-01T19:11:26+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://reap2026.in/reap-choice-locking-process</loc>
-  <lastmod>2026-03-11T21:14:47+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://reap2026.in/reap-choice-locking-process</loc>
+<lastmod>2026-04-01T19:11:26+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://reap2026.in/top-colleges</loc>
-  <lastmod>2026-03-11T21:14:47+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://reap2026.in/reap-seat-matrix</loc>
+<lastmod>2026-04-01T19:11:26+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://reap2026.in/reap-seat-matrix</loc>
-  <lastmod>2026-03-11T21:14:47+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://reap2026.in/tfws</loc>
+<lastmod>2026-04-01T19:11:26+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://reap2026.in/freeze-vs-float-option-in-reap</loc>
-  <lastmod>2026-03-11T21:14:47+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://reap2026.in/freeze-vs-float-option-in-reap</loc>
+<lastmod>2026-04-01T19:11:26+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://reap2026.in/rajasthan-engineering-entrance-exam</loc>
-  <lastmod>2026-03-11T21:14:47+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://reap2026.in/top-colleges</loc>
+<lastmod>2026-04-01T19:11:26+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://reap2026.in/rajasthan-engineering-colleges</loc>
-  <lastmod>2026-03-11T21:14:47+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://reap2026.in/rajasthan-engineering-entrance-exam</loc>
+<lastmod>2026-04-01T19:11:26+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://reap2026.in/faq</loc>
-  <lastmod>2026-03-11T21:14:47+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://reap2026.in/reap-counselling</loc>
+<lastmod>2026-04-01T19:11:26+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://reap2026.in/about</loc>
-  <lastmod>2026-03-11T21:14:47+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://reap2026.in/faq</loc>
+<lastmod>2026-04-01T19:11:26+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://reap2026.in/contact</loc>
-  <lastmod>2026-03-11T21:14:47+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://reap2026.in/rtu-kota</loc>
+<lastmod>2026-04-01T19:11:26+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://reap2026.in/privacy</loc>
-  <lastmod>2026-03-11T21:14:47+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://reap2026.in/mbm-jodhpur</loc>
+<lastmod>2026-04-01T19:11:26+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://reap2026.in/terms</loc>
-  <lastmod>2026-03-11T21:14:47+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://reap2026.in/ctae-udaipur</loc>
+<lastmod>2026-04-01T19:11:26+00:00</lastmod>
+<priority>0.80</priority>
 </url>
-
-
+<url>
+<loc>https://reap2026.in/btu-bikaner</loc>
+<lastmod>2026-04-01T19:11:26+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://reap2026.in/skit-jaipur</loc>
+<lastmod>2026-04-01T19:11:26+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://reap2026.in/jecrc-jaipur</loc>
+<lastmod>2026-04-01T19:11:26+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://reap2026.in/rajasthan-engineering-colleges</loc>
+<lastmod>2026-04-01T19:11:26+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://reap2026.in/about</loc>
+<lastmod>2026-04-01T19:11:26+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://reap2026.in/contact</loc>
+<lastmod>2026-04-01T19:11:26+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://reap2026.in/privacy</loc>
+<lastmod>2026-04-01T19:11:26+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://reap2026.in/terms</loc>
+<lastmod>2026-04-01T19:11:26+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://reap2026.in/blog</loc>
+<lastmod>2026-04-01T19:11:26+00:00</lastmod>
+<priority>0.64</priority>
+</url>
 </urlset>
