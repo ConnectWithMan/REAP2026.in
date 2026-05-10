@@ -841,13 +841,13 @@
                 }
 
                 // NOTE: Uncomment the line below to visually test the highlighting feature if you are testing this out of the year 2026.
-                   isCurrent = dateText.includes("07/05/2026"); 
+                //  isCurrent = dateText.includes("07/05/2026"); 
 
                 if (isCurrent) {
                     row.classList.add('current-active-row');
                     const activityCell = row.querySelector('td[data-label="Activity"]');
                     if (activityCell) {
-                        activityCell.innerHTML += ' <span class="badge">Active Today</span>';
+                        activityCell.innerHTML += ' <span class="badge">Active</span>';
                     }
                 }
             });
