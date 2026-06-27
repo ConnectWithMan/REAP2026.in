@@ -757,6 +757,117 @@
                 margin: 10px 0;
             }
         }
+
+        /* Quick Links Section */
+        .quick-links-section {
+            background: var(--bg-white);
+            padding: 50px 0;
+            border-top: 1px solid var(--border-light);
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .quick-links-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .quick-link-card {
+            display: flex;
+            align-items: center;
+            padding: 18px 20px;
+            background: var(--bg-white);
+            border: 1px solid var(--border-light);
+            border-radius: var(--border-radius-sm);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            color: var(--text-dark);
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quick-link-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary-color);
+        }
+
+        .quick-link-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .quick-link-card:hover::before {
+            opacity: 1;
+        }
+
+        .quick-link-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: rgba(99, 102, 241, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+            color: var(--primary-color);
+            transition: all 0.3s ease;
+        }
+
+        .quick-link-card:hover .quick-link-icon {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: #ffffff;
+        }
+
+        .quick-link-title {
+            font-family: var(--font-family-heading);
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin: 0;
+            color: var(--text-dark);
+            flex-grow: 1;
+            line-height: 1.3;
+        }
+
+        .quick-link-arrow {
+            font-size: 1.1rem;
+            color: var(--text-medium);
+            transition: transform 0.3s ease, color 0.3s ease;
+            margin-left: 8px;
+            font-weight: bold;
+        }
+
+        .quick-link-card:hover .quick-link-arrow {
+            transform: translateX(4px);
+            color: var(--secondary-color);
+        }
+
+        @media (max-width: 991px) {
+            .quick-links-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 575px) {
+            .quick-links-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            .quick-link-card {
+                padding: 14px 16px;
+            }
+        }
     </style>
 </head>
 
@@ -931,6 +1042,112 @@
         </div>
     </section>
 
+    <!-- QUICK COUNSELLING LINKS -->
+    <section class="section quick-links-section">
+        <div class="container">
+            <div class="section-title">Quick Counselling Links</div>
+            <div class="quick-links-grid">
+                <a href="/reap-schedule" target="_blank" rel="noopener noreferrer" class="quick-link-card">
+                    <div class="quick-link-icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                            <polyline points="14 2 14 8 20 8" />
+                            <line x1="16" y1="13" x2="8" y2="13" />
+                            <line x1="16" y1="17" x2="8" y2="17" />
+                            <polyline points="10 9 9 9 8 9" />
+                        </svg>
+                    </div>
+                    <span class="quick-link-title">REAP Schedule</span>
+                    <span class="quick-link-arrow">&rarr;</span>
+                </a>
+                <a href="/blog" target="_blank" rel="noopener noreferrer" class="quick-link-card">
+                    <div class="quick-link-icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+                            <rect x="8" y="2" width="8" height="4" rx="1" ry="1" />
+                            <polyline points="9 13 11 15 15 11" />
+                        </svg>
+                    </div>
+                    <span class="quick-link-title">REAP Updates</span>
+                    <span class="quick-link-arrow">&rarr;</span>
+                </a>
+                <a href="/reap-merit-list" target="_blank" rel="noopener noreferrer" class="quick-link-card">
+                    <div class="quick-link-icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="20" x2="18" y2="10" />
+                            <line x1="12" y1="20" x2="12" y2="4" />
+                            <line x1="6" y1="20" x2="6" y2="14" />
+                        </svg>
+                    </div>
+                    <span class="quick-link-title">REAP Merit List</span>
+                    <span class="quick-link-arrow">&rarr;</span>
+                </a>
+                <a href="https://www.famral.com/reap-college-predictor" target="_blank" rel="noopener noreferrer"
+                    class="quick-link-card">
+                    <div class="quick-link-icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                        </svg>
+                    </div>
+                    <span class="quick-link-title">College Predictor</span>
+                    <span class="quick-link-arrow">&rarr;</span>
+                </a>
+                <a href="/reap-registration" target="_blank" rel="noopener noreferrer" class="quick-link-card">
+                    <div class="quick-link-icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                            <circle cx="8.5" cy="7" r="4" />
+                            <line x1="20" y1="8" x2="20" y2="14" />
+                            <line x1="17" y1="11" x2="23" y2="11" />
+                        </svg>
+                    </div>
+                    <span class="quick-link-title">Registration Process</span>
+                    <span class="quick-link-arrow">&rarr;</span>
+                </a>
+                <a href="/reap-counselling-process" target="_blank" rel="noopener noreferrer" class="quick-link-card">
+                    <div class="quick-link-icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                        </svg>
+                    </div>
+                    <span class="quick-link-title">Counselling Process</span>
+                    <span class="quick-link-arrow">&rarr;</span>
+                </a>
+                <a href="/reap-choice-filling-process" target="_blank" rel="noopener noreferrer"
+                    class="quick-link-card">
+                    <div class="quick-link-icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                            <path d="M18.5 2.5a2.121 2.121 0 1 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+                        </svg>
+                    </div>
+                    <span class="quick-link-title">Choice Filling</span>
+                    <span class="quick-link-arrow">&rarr;</span>
+                </a>
+                <a href="/reap-seat-allotment-process" target="_blank" rel="noopener noreferrer"
+                    class="quick-link-card">
+                    <div class="quick-link-icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="8" r="7" />
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+                        </svg>
+                    </div>
+                    <span class="quick-link-title">Seat Allotment</span>
+                    <span class="quick-link-arrow">&rarr;</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    
     <!-- COMMON MISTAKES SECTION -->
     <section class="section">
         <div class="container">
