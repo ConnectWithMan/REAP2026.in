@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,18 +16,18 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap"
         rel="stylesheet">
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9724513291347385"
-     crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9724513291347385"
+        crossorigin="anonymous"></script>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4PB7HZG7PP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PB7HZG7PP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'G-4PB7HZG7PP');
-</script>
+        gtag('config', 'G-4PB7HZG7PP');
+    </script>
 
     <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
     <script>
@@ -286,7 +283,7 @@
             overflow: hidden;
             border-bottom: none;
         }
-        
+
         .hero::before {
             content: '';
             position: absolute;
@@ -295,7 +292,7 @@
             width: 100%;
             height: 100%;
             background: radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.15) 0%, transparent 40%),
-                        radial-gradient(circle at 90% 80%, rgba(236, 72, 153, 0.15) 0%, transparent 40%);
+                radial-gradient(circle at 90% 80%, rgba(236, 72, 153, 0.15) 0%, transparent 40%);
             pointer-events: none;
             z-index: 0;
         }
@@ -377,7 +374,7 @@
             transform: perspective(1000px) rotateY(-5deg);
             transition: transform 0.5s ease;
         }
-        
+
         .hero-img img:hover {
             transform: perspective(1000px) rotateY(0deg) scale(1.02);
         }
@@ -452,7 +449,7 @@
             text-align: left;
             vertical-align: middle;
         }
-        
+
         tr:last-child td {
             border-bottom: none;
         }
@@ -620,6 +617,31 @@
             border-top: 4px solid var(--secondary-color);
         }
 
+        /* Overlay and body scroll locking */
+        body.no-scroll {
+            overflow: hidden;
+        }
+
+        .nav-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            z-index: 98;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .nav-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
         /* Responsive Adjustments */
         @media (max-width: 991px) {
             .hero-content {
@@ -663,16 +685,17 @@
                 position: fixed;
                 top: 0;
                 right: -100%;
-                width: 70%;
+                width: 300px;
+                max-width: 85%;
                 background-color: var(--bg-white);
-                padding: 4rem 1.5rem;
-                /* Adjusted horizontal padding for mobile menu */
-                box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
-                transition: right 0.3s ease-in-out;
+                padding: 5rem 1.5rem 2rem 1.5rem;
+                box-shadow: -2px 0 15px rgba(0, 0, 0, 0.15);
+                transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
                 z-index: 99;
                 align-items: flex-start;
-                gap: 1rem;
-                /* Adjusted gap for vertical spacing in mobile menu */
+                gap: 0.5rem;
+                overflow-y: auto;
+                -webkit-overflow-scrolling: touch;
             }
 
             .nav-menu.active {
@@ -838,7 +861,7 @@
             color: var(--primary-color);
         }
 
-                /* Quick Links Section */
+        /* Quick Links Section */
         .quick-links-section {
             background: var(--bg-white);
             padding: 50px 0;
@@ -944,8 +967,163 @@
                 grid-template-columns: 1fr;
                 gap: 12px;
             }
+
             .quick-link-card {
                 padding: 14px 16px;
+            }
+        }
+
+        /* Top Ticker Style */
+        .top-ticker {
+            background: linear-gradient(90deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%);
+            color: #FFFFFF;
+            padding: 10px 20px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 102;
+        }
+
+        .top-ticker span {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .top-ticker a {
+            color: #FFFFFF;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            padding: 4px 14px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .top-ticker a:hover {
+            background: #FFFFFF;
+            color: #4F46E5;
+            border-color: #FFFFFF;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Merit List CTA Section */
+        .merit-list-cta {
+            background: linear-gradient(135deg, #F8FAFC 0%, #EEF2FF 100%);
+            border: 2px solid #E2E8F0;
+            border-left: 6px solid var(--primary-color);
+            border-radius: var(--border-radius-md);
+            padding: 2rem;
+            margin-top: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+        }
+
+        .merit-list-cta:hover {
+            box-shadow: var(--shadow-lg);
+            border-color: #CBD5E1;
+            transform: translateY(-2px);
+        }
+
+        .merit-list-cta-content {
+            flex: 1;
+        }
+
+        .merit-list-cta-content h3 {
+            font-family: var(--font-family-heading);
+            color: var(--text-dark);
+            margin-top: 0;
+            margin-bottom: 0.75rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .merit-list-cta-content h3::before {
+            content: '📢';
+            font-size: 1.4rem;
+        }
+
+        .merit-list-cta-content p {
+            margin: 0 0 1.25rem 0;
+            color: var(--text-medium);
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        .merit-list-dates {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .merit-list-dates span {
+            background: rgba(99, 102, 241, 0.08);
+            color: var(--primary-color);
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid rgba(99, 102, 241, 0.15);
+        }
+
+        .merit-list-dates span strong {
+            color: var(--text-dark);
+        }
+
+        .merit-list-cta-action {
+            flex-shrink: 0;
+        }
+
+        .merit-list-cta-action .btn {
+            font-size: 1.1rem;
+            white-space: nowrap;
+            padding: 1rem 2.2rem;
+            box-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .merit-list-cta {
+                flex-direction: column;
+                align-items: stretch;
+                text-align: center;
+                padding: 1.5rem;
+                gap: 1.5rem;
+            }
+
+            .merit-list-cta-content h3 {
+                justify-content: center;
+                font-size: 1.3rem;
+            }
+
+            .merit-list-dates {
+                justify-content: center;
+                gap: 0.75rem;
+            }
+
+            .merit-list-dates span {
+                width: 100%;
+            }
+
+            .merit-list-cta-action .btn {
+                width: 100%;
             }
         }
     </style>
@@ -957,8 +1135,9 @@
         <span>⚡ REAP College Predictor 2026 is now live!</span>
         <a href="https://www.famral.com/reap-college-predictor">Predict Now &rarr;</a>
     </div>
-    
+
     <header>
+        <div class="nav-overlay"></div>
         <nav class="navbar">
             <a href="/" class="nav-branding">REAP 2026</a>
             <ul class="nav-menu">
@@ -1026,19 +1205,15 @@
 
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9724513291347385"
-     crossorigin="anonymous"></script>
-<!-- R26AllPgTopDsplyRes01 -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-9724513291347385"
-     data-ad-slot="2340757334"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+        crossorigin="anonymous"></script>
+    <!-- R26AllPgTopDsplyRes01 -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9724513291347385" data-ad-slot="2340757334"
+        data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
 
-    
+
     <!-- HERO SECTION -->
     <section class="hero">
         <div class="container">
@@ -1061,8 +1236,13 @@
         <div class="container">
             <div class="section-title">What is REAP Merit List?</div>
             <p>
-                <b>The REAP 2026 Merit List</b> is the official rank list published by the Centre for Electronic Governance (CEG), Rajasthan. It determines the priority of candidates for admission into various <b>B.E/B.Tech</b> and <b>B.Arch</b> programs across government and private technical institutions in the state. 
-                Candidates are assigned a State Merit Rank based on their performance in JEE Main 2026 and their 12th board marks. All subsequent <a href="/reap-counselling-process">counseling rounds</a>, including choice filling and seat allotment, are conducted strictly according to this merit list.
+                <b>The REAP 2026 Merit List</b> is the official rank list published by the Centre for Electronic
+                Governance (CEG), Rajasthan. It determines the priority of candidates for admission into various
+                <b>B.E/B.Tech</b> and <b>B.Arch</b> programs across government and private technical institutions in the
+                state.
+                Candidates are assigned a State Merit Rank based on their performance in JEE Main 2026 and their 12th
+                board marks. All subsequent <a href="/reap-counselling-process">counseling rounds</a>, including choice
+                filling and seat allotment, are conducted strictly according to this merit list.
             </p>
         </div>
     </section>
@@ -1105,27 +1285,28 @@
     </section>
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9724513291347385"
-     crossorigin="anonymous"></script>
-<!-- R26AllPgDsplyRes -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-9724513291347385"
-     data-ad-slot="2340757334"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-    
+        crossorigin="anonymous"></script>
+    <!-- R26AllPgDsplyRes -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9724513291347385" data-ad-slot="2340757334"
+        data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
     <!-- MERIT CALCULATION SECTION -->
     <section class="section">
         <div class="container">
             <div class="section-title">How is the Merit List Prepared?</div>
             <p>The Centre for Electronic Governance generates two separate priority lists for B.Tech admissions:</p>
             <ul>
-                <li><b>Priority 1 (JEE Main Candidates):</b> The first merit list is prepared strictly based on the candidates' JEE Main 2026 All India Rank (AIR) / Percentile. All candidates who apply through their JEE Main score are given higher priority during seat allotment.</li>
-                <li><b>Priority 2 (12th Board Candidates):</b> A secondary merit list is formulated for candidates who did not appear for JEE Main or chose to apply based on their Class 12th board percentage. They are ranked after the JEE Main candidates.</li>
-                <li><b>Ex-Servicemen & PwD:</b> Special category merit numbers are generated according to the horizontal reservation policies of the Rajasthan Government.</li>
+                <li><b>Priority 1 (JEE Main Candidates):</b> The first merit list is prepared strictly based on the
+                    candidates' JEE Main 2026 All India Rank (AIR) / Percentile. All candidates who apply through their
+                    JEE Main score are given higher priority during seat allotment.</li>
+                <li><b>Priority 2 (12th Board Candidates):</b> A secondary merit list is formulated for candidates who
+                    did not appear for JEE Main or chose to apply based on their Class 12th board percentage. They are
+                    ranked after the JEE Main candidates.</li>
+                <li><b>Ex-Servicemen & PwD:</b> Special category merit numbers are generated according to the horizontal
+                    reservation policies of the Rajasthan Government.</li>
             </ul>
         </div>
     </section>
@@ -1137,10 +1318,13 @@
             <p>Follow these steps to check your REAP 2026 rank once the list is officially released:</p>
             <ul>
                 <li><b>Step 1:</b> Visit the official REAP 2026 admission portal.</li>
-                <li><b>Step 2:</b> Look for the link that says <b>"Check Merit List for B.E/B.Tech"</b> on the homepage.</li>
-                <li><b>Step 3:</b> Enter your Login ID (Form/Challan Number) and Password created during registration.</li>
+                <li><b>Step 2:</b> Look for the link that says <b>"Check Merit List for B.E/B.Tech"</b> on the homepage.
+                </li>
+                <li><b>Step 3:</b> Enter your Login ID (Form/Challan Number) and Password created during registration.
+                </li>
                 <li><b>Step 4:</b> Click on 'Submit' to view your profile.</li>
-                <li><b>Step 5:</b> Your combined state merit rank, category rank, and priority status will be displayed. Download or print the rank card for future reference.</li>
+                <li><b>Step 5:</b> Your combined state merit rank, category rank, and priority status will be displayed.
+                    Download or print the rank card for future reference.</li>
             </ul>
         </div>
     </section>
@@ -1149,7 +1333,8 @@
     <section class="section">
         <div class="container">
             <div class="section-title">Tie-Breaking Rules</div>
-            <p>If two or more candidates score the exact same percentile or marks, REAP uses the following tie-breaking criteria in order:</p>
+            <p>If two or more candidates score the exact same percentile or marks, REAP uses the following tie-breaking
+                criteria in order:</p>
             <h3 class="subsection-title-blue">For JEE Main Candidates:</h3>
             <ul>
                 <li>Higher percentile score in Mathematics.</li>
@@ -1164,20 +1349,40 @@
                 <li>Higher marks in the third Science/Vocational subject.</li>
                 <li>Candidate older in age will be placed higher.</li>
             </ul>
+
+            <!-- REAP 2026 Provisional Merit List CTA -->
+            <div class="merit-list-cta">
+                <div class="merit-list-cta-content">
+                    <h3>REAP 2026 Provisional Merit List is Live!</h3>
+                    <p>You can check your rank and category status directly on the official portal using your
+                        Form Number and Password. (Link will be available when merit list is out) </p>
+                    <div class="merit-list-dates">
+                        <span><strong>Objection Deadline:</strong> July 1, 2026</span>
+                        <span><strong>Final Merit List:</strong> July 2, 2026</span>
+                    </div>
+                </div>
+                <div class="merit-list-cta-action">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-warning">Coming Soon</a>
+                </div>
+            </div>
         </div>
     </section>
 
-    
+
     <!-- AFTER MERIT LIST SECTION -->
     <section class="section">
         <div class="container">
             <div class="section-title">What After Merit List Publication?</div>
             <p>Once the rank list is published, the actual admission cycle starts:</p>
             <ul>
-                <li><b>Choice Filling & Locking:</b> Based on your rank, you must fill out your preferred colleges and branches online. Ensure you place your highest priorities at the top.</li>
-                <li><b>Seat Allotment:</b> Seats will be allocated in various rounds considering your merit rank, category, and filled choices.</li>
-                <li><b>Reporting:</b> If allotted a seat, you need to pay the initial fee and report to the designated institute with all original documents for verification.</li>
-                <li><b>Upward Movement:</b> If unsatisfied with the allotted seat, you can apply for <a href="/reap-upward-movement">upward movement</a> (sliding) in the subsequent round.</li>
+                <li><b>Choice Filling & Locking:</b> Based on your rank, you must fill out your preferred colleges and
+                    branches online. Ensure you place your highest priorities at the top.</li>
+                <li><b>Seat Allotment:</b> Seats will be allocated in various rounds considering your merit rank,
+                    category, and filled choices.</li>
+                <li><b>Reporting:</b> If allotted a seat, you need to pay the initial fee and report to the designated
+                    institute with all original documents for verification.</li>
+                <li><b>Upward Movement:</b> If unsatisfied with the allotted seat, you can apply for <a
+                        href="/reap-upward-movement">upward movement</a> (sliding) in the subsequent round.</li>
             </ul>
         </div>
     </section>
@@ -1303,11 +1508,24 @@
         document.addEventListener('DOMContentLoaded', function () {
             const hamburger = document.querySelector('.hamburger');
             const navMenu = document.querySelector('.nav-menu');
+            const overlay = document.querySelector('.nav-overlay');
 
-            hamburger.addEventListener('click', () => {
+            function toggleMenu() {
+                const isActive = navMenu.classList.toggle('active');
                 hamburger.classList.toggle('active');
-                navMenu.classList.toggle('active');
-            });
+                overlay.classList.toggle('active');
+                document.body.classList.toggle('no-scroll', isActive);
+            }
+
+            function closeMenu() {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.classList.remove('no-scroll');
+            }
+
+            hamburger.addEventListener('click', toggleMenu);
+            overlay.addEventListener('click', closeMenu);
 
             // Handle Dropdown Toggles and Links
             document.querySelectorAll('.nav-link').forEach(n => {
@@ -1319,8 +1537,7 @@
                         parent.classList.toggle('active');
                     } else {
                         // It's a regular link
-                        hamburger.classList.remove('active');
-                        navMenu.classList.remove('active');
+                        closeMenu();
                     }
                 });
             });
@@ -1328,8 +1545,7 @@
             // Close menu when a dropdown item is clicked
             document.querySelectorAll('.dropdown-item').forEach(item => {
                 item.addEventListener('click', () => {
-                    hamburger.classList.remove('active');
-                    navMenu.classList.remove('active');
+                    closeMenu();
                     // Close all dropdowns
                     document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('active'));
                 });
@@ -1337,7 +1553,7 @@
 
             // Close dropdowns when clicking outside
             document.addEventListener('click', (e) => {
-                if (!e.target.closest('.dropdown')) {
+                if (!e.target.closest('.dropdown') && !e.target.closest('.hamburger') && !e.target.closest('.nav-menu')) {
                     document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('active'));
                 }
             });
