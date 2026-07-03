@@ -949,6 +949,115 @@
                 padding: 14px 16px;
             }
         }
+
+                /* Merit List CTA Section */
+        .merit-list-cta {
+            background: linear-gradient(135deg, #F8FAFC 0%, #EEF2FF 100%);
+            border: 2px solid #E2E8F0;
+            border-left: 6px solid var(--primary-color);
+            border-radius: var(--border-radius-md);
+            padding: 2rem;
+            margin-top: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+        }
+
+        .merit-list-cta:hover {
+            box-shadow: var(--shadow-lg);
+            border-color: #CBD5E1;
+            transform: translateY(-2px);
+        }
+
+        .merit-list-cta-content {
+            flex: 1;
+        }
+
+        .merit-list-cta-content h3 {
+            font-family: var(--font-family-heading);
+            color: var(--text-dark);
+            margin-top: 0;
+            margin-bottom: 0.75rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .merit-list-cta-content h3::before {
+            content: '📢';
+            font-size: 1.4rem;
+        }
+
+        .merit-list-cta-content p {
+            margin: 0 0 1.25rem 0;
+            color: var(--text-medium);
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        .merit-list-dates {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .merit-list-dates span {
+            background: rgba(99, 102, 241, 0.08);
+            color: var(--primary-color);
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid rgba(99, 102, 241, 0.15);
+        }
+
+        .merit-list-dates span strong {
+            color: var(--text-dark);
+        }
+
+        .merit-list-cta-action {
+            flex-shrink: 0;
+        }
+
+        .merit-list-cta-action .btn {
+            font-size: 1.1rem;
+            white-space: nowrap;
+            padding: 1rem 2.2rem;
+            box-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .merit-list-cta {
+                flex-direction: column;
+                align-items: stretch;
+                text-align: center;
+                padding: 1.5rem;
+                gap: 1.5rem;
+            }
+
+            .merit-list-cta-content h3 {
+                justify-content: center;
+                font-size: 1.3rem;
+            }
+
+            .merit-list-dates {
+                justify-content: center;
+                gap: 0.75rem;
+            }
+
+            .merit-list-dates span {
+                width: 100%;
+            }
+
+            .merit-list-cta-action .btn {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 
@@ -1129,6 +1238,23 @@
         </div>
     </section>
 
+
+            <div class="merit-list-cta">
+                <div class="merit-list-cta-content">
+                    <h3>REAP 2026 Mock Round Allotment!</h3>
+                    <p>Check your REAP 2026 Mock Round Allotment directly on the official portal using your
+                        Form Number and Password.</p>
+                    <div class="merit-list-dates">
+                        <span><strong>Last date to fill and lock the choices:</strong> July 6, 2026</span>
+                        <span><strong>Seat Allotment for TFWS Candidates:</strong> July 8, 2026</span>
+                    </div>
+                </div>
+                <div class="merit-list-cta-action">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-warning">Coming Soon</a>
+                </div>
+            </div>
+    
+    
     <!-- QUICK COUNSELLING LINKS -->
     <section class="section quick-links-section">
         <div class="container">
