@@ -397,22 +397,27 @@
         }
     </style>
     <!-- JSON-LD Structured Data with AggregateRating -->
-    <script type="application/ld+json">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph":[
     {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "RTU Result 2026",
-      "description": "Rajasthan Technical University (RTU) Results: B.Tech, MBA, MCA semesters, grade sheets, and re-evaluation.",
-      "url": "https://reap2026.in/rtu-result",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "ratingCount": "6154",
-        "bestRating": "5",
-        "worstRating": "1"
-      }
+      "@type":"WebPage",
+      "@id":"https://reap2026.in/rtu-result",
+      "url":"https://reap2026.in/rtu-result",
+      "name":"RTU Result 2026"
+    },
+    {
+      "@type":"Article",
+      "headline":"RTU Result 2026",
+      "mainEntityOfPage":{
+        "@id":"https://reap2026.in/rtu-result"
+      },
+      "description":"RTU Result 2026 for all semesters."
     }
-    </script>
+  ]
+}
+</script>
 </head>
 
 <body>
